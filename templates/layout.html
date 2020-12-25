@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+	<title>{{title}}</title>
+</head>
+<body>
+<ul class="mainmenu">
+<li><a href="{{ url_for('index') }}">Каталог</a></li>
+<li><a href="{{ url_for('register') }}">Добавить</a></li>
+<li><a href="{{ url_for('delete') }}">Удалить</a></li>
+<li><a href="{{ url_for('uploadfile') }}">Загрузить с файла</a></li>
+</ul>
+
+<div class="content">
+{% block content %}
+{% endblock %}
+</div>
+</body>
+</html>

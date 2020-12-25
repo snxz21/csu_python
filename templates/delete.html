@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash {{cat}}">{{msg}}</div>
+{% endfor %}
+<form action="" method="post" class="form-contact">
+<p><label>Артикул для удаления: </label> <input type="text" name="sku" value="" requied />
+<p><input type="submit" value="del" />
+</form>
+{% endblock %}

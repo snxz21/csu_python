@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<ul>
+{% for u in list %}
+<li><p>Brand: {{u.brand}}, Name: {{u.name}}</p>
+	<ul>
+	<li>Price: {{u.price}}</li>
+	<li>Quantity: {{u.quantity}}</li>
+	<li>Sku: {{u.sku}}</li>
+	</ul>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

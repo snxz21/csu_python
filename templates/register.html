@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash {{cat}}">{{msg}}</div>
+{% endfor %}
+<form action="" method="post" class="form-contact">
+<p><label>Бренд: </label> <input type="text" name="brand" value="" requied />
+<p><label>Название: </label> <input type="text" name="name" value="" requied />
+<p><label>Артикул: </label> <input type="text" name="sku" value="" requied />
+<p><label>Цена: </label> <input type="text" name="price" value="" requied />
+<p><label>Количество: </label> <input type="text" name="quantity" value="" requied />
+
+<p><input type="submit" value="Добавить" />
+</form>
+{% endblock %}
